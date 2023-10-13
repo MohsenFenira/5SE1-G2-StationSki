@@ -27,8 +27,8 @@ public class Inscription implements Serializable {
     @ManyToOne
     private Skieur skieur;
 
-    /*    @ManyToOne()
+    @ManyToOne()
     @JsonIgnore
     private Cours cours;
-    */
+
 }

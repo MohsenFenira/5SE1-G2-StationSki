@@ -27,15 +27,15 @@ public class Skieur implements Serializable {
     private String prenomS;
     private LocalDate dateNaissance;
     private String ville;
-    /*
+
     @ManyToMany
     private Set<Piste> pistes;
-     */
+
     @OneToMany(mappedBy = "skieur",cascade = CascadeType.ALL)
     private Set<Inscription> inscriptions;
-    /*
+
     @OneToOne(cascade = CascadeType.ALL)
     @JsonIgnore
     private Abonnement abonnement;
-    */
+
 }
