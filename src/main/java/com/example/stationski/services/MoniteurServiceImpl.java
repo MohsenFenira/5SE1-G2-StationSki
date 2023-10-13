@@ -1,6 +1,7 @@
 package com.example.stationski.services;
 
 import com.example.stationski.entities.Moniteur;
+import com.example.stationski.repositories.CoursRepository;
 import com.example.stationski.repositories.MoniteurRepository;
 
 import javax.transaction.Transactional;
