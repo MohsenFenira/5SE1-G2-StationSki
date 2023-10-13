@@ -1,13 +1,15 @@
 package com.example.stationski.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.Set;
 
 
-    @Entity
+@Entity
     @Getter
     @Setter
     @AllArgsConstructor
@@ -24,6 +26,9 @@ import java.time.LocalDate;
         private String prenomM;
         private LocalDate dateRecru;
         private float prime;
+    @OneToMany(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @JsonIgnore
+    private Set<Cours> coursSet;
 
     }
 
